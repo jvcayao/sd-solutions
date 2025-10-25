@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "SD Solutions",
+    "name": "sdsolution/pmt",
     "type": "project",
     "description": "Mini Laravel System — Project Management Tool",
     "keywords": [
