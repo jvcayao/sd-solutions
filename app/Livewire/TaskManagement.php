@@ -98,4 +98,3 @@ class TaskManagement extends Component
         return view('livewire.task-management');
     }
 }
-
