@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Middleware\VerifyUserHasRole;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
