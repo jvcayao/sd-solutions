@@ -17,7 +17,10 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'description' => $this->faker->paragraph(),
+            'deadline' => $this->faker->dateTimeBetween('+1 week', '+1 month')->format('Y-m-d'),
+            // 'user_id' should be set explicitly in tests if needed
         ];
     }
 }

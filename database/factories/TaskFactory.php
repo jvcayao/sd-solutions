@@ -17,7 +17,10 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->sentence(4),
+            'status' => 'todo',
+            'due_date' => $this->faker->dateTimeBetween('+1 day', '+2 weeks')->format('Y-m-d'),
+            // 'project_id' should be set explicitly in tests if needed
         ];
     }
 }
