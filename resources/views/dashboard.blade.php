@@ -16,9 +16,9 @@
             </div>
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-4">
                 @if(request('tab', 'projects') == 'projects')
-                    @livewire('project-manager')
+                    @livewire('project-management')
                 @elseif(request('tab') == 'tasks')
-                    @livewire('task-manager')
+                    @livewire('task-management')
                 @elseif(request('tab') == 'activity' && auth()->user() && auth()->user()->hasRole('Admin'))
                     @livewire('activity-log-viewer')
                 @endif

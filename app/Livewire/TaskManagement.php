@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Models\Project;
+use App\Models\Task;
 use Livewire\Component;
 
 class TaskManagement extends Component

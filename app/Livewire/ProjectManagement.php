@@ -2,6 +2,9 @@
 
 namespace App\Livewire;
 
+
+use App\Models\Project;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class ProjectManagement extends Component

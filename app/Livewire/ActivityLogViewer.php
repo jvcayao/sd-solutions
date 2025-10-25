@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use OwenIt\Auditing\Models\Audit;
@@ -12,8 +13,8 @@ class ActivityLogViewer extends Component
 
     public function mount()
     {
-        // Only admins can view logs
-        if (! Auth::user() || ! Auth::user()->hasRole('Admin')) {
+        $user = Auth::user();
+        if (! $user || ! ($user instanceof User) || ! $user->hasRole('Admin')) {
             abort(403);
         }
         $this->logs = Audit::with('user')->latest()->limit(20)->get();
